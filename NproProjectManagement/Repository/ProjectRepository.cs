@@ -51,11 +51,11 @@ namespace NproProjectManagement.Repository
 
         public async Task<ProjectDetail> InsertProjectAsync(ProjectDetail project)
         {
-            var query = "INSERT INTO dbo.Project (ProjectID, Title, Description, StartDate, Deadline, Status, CreatorID) VALUES (@projectid, @title, @description,@startdate, @deadline, @status, @creatorid)" +
+            var query = "INSERT INTO dbo.Project (Title, Description, StartDate, Deadline, Status, CreatorID) VALUES ( @title, @description,@startdate, @deadline, @status, @creatorid)" +
                 "SELECT CAST(SCOPE_IDENTITY() as int)";
 
             var parameters = new DynamicParameters();
-            parameters.Add("projectid", project.ProjectID, DbType.Int32);
+            //parameters.Add("projectid", project.ProjectID, DbType.Int32);
             parameters.Add("title", project.Title, DbType.String);
             parameters.Add("description", project.Description, DbType.String);
             parameters.Add("deadline", project.Deadline, DbType.DateTime);
