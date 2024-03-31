@@ -12,7 +12,7 @@ using NproProjectManagement.Model;
 
 namespace NproProjectManagement.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("projectapi")]
     [ApiController]
     public partial class ProjectController : ControllerBase
     {
