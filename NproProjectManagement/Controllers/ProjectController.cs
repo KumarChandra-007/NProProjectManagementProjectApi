@@ -50,7 +50,7 @@ namespace NproProjectManagement.Controllers
             return Ok(project);
         }
 
-        [HttpPost]
+        [HttpPost("PostProject")]
         public async Task<IActionResult> PostProjectAsync([FromBody] ProjectDetail model)
         {
             var project = await _projectService.PostProjectAsync(model);
@@ -61,7 +61,7 @@ namespace NproProjectManagement.Controllers
 
             return Ok(project);
         }
-        [HttpPut]
+        [HttpPut("PutProject")]
         public async Task<IActionResult> PutProjectAsync([FromBody] ProjectDetail model)
         {
             var project = await _projectService.PutProjectAsync(model);
