@@ -4,7 +4,7 @@ using ProjectApi.Model;
 
 namespace ProjectApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("projectapi")]
     [ApiController]
     public partial class ProjectController : ControllerBase
     {
